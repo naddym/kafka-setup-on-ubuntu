@@ -345,13 +345,10 @@ sudo service kafka start
 ./bin/kafka-topics.sh --zookeeper zookeeper1:2181/kafka --create --topic awesome-kafka --replication-factor 1 --partitions 3
 ```
 
-2. Use the following command to describe the topic`:
+2. Use the following command to describe the topic:
 
 ```shell
 ./bin/kafka-topics.sh --zookeeper zookeeper1:2181/kafka --topic awesome-kafka --describe
-```:
-
-```shell
-./bin/kafka-topics.sh --zookeeper zookeeper1:2181/kafka --create --topic awesome-kafka --replication-factor 1 --partitions 3
 ```
 
+Thats it, your Kafka cluster is ready to consume events!!
