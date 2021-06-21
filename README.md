@@ -334,7 +334,7 @@ sudo update-rc.d kafka defaults
 sudo service kafka start
 ```
 ```shell
-sudo service kafka start
+sudo service kafka status
 ```
 
 ### Create a Topic
@@ -349,6 +349,20 @@ sudo service kafka start
 
 ```shell
 ./bin/kafka-topics.sh --zookeeper zookeeper1:2181/kafka --topic awesome-kafka --describe
+```
+
+### Run a Producer
+
+1. Use the following command to run a Producer and publish messages
+
+```shell
+./bin/kafka-console-producer.sh --broker-list kafka1:9092 --topic awesome-kafka
+>hello kafka
+>this is from your producer
+>are you alright?
+>Looks you are not responding back
+>Bye :)
+
 ```
 
 Thats it, your Kafka cluster is ready to consume events!!
